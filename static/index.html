@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Creepy Lemonade</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="static/css/normalize.css">
+  <link rel="stylesheet" href="static/css/skeleton.css">
+  <!--<link rel="stylesheet" href="static/css/custom.css">-->
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style type="text/css">
+    textarea {
+    height: 100px;
+    font-family: monospace;
+    }
+    ul#tousers{
+    }
+    input#url{
+      font-family: monospace;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+ <div class="row">
+   <h4><a href="http://creep.honor.es">http://creep.honor.es</a> (Creepy Lemonade)</h4>
+   <p>Greetings dear user. Please read the following usage text.
+     <ul id="tousers">
+     <li>To get the <b>download links</b> for a <b>YouTube</b> video or playlist, paste the URL below and press <b>Enter</b> or click the <b>Creep</b> button.</li>
+     <li>The URL format: 
+       <code>{optional}/watch?v={id}</code> for video and 
+       <code>{optional}/playlist?list={id}</code> for playlist. 
+       So, if you are copy/pasting from address bar, that will work just fine. <i>Channels are not supported at this moment.</i>
+     </li> 
+     <li>In case of playlists, <b>all formats</b> for <b>all available qualities</b> are provided in their respective text boxes.
+   Just copy them to a text file and import the file from a downloader like IDM, uGet etc. Details for individual videos are shown just below the text boxes. If you don't want those for some reason, check the <b>Text only</b> checkbox.</li>
+   <li>To reduce annoyance, small enhancements have been done, e.g automatic appropriate text selection, <code>ctrl+A</code> etc.
+   <li><em>Please use, support and spread awareness about free software.</em> <a href="https://www.gnu.org/philosophy/free-sw.html">Read more</a> about free software and GNU.</li>
+   </ul>
+   </p>
+ </div>
+  <div class="row">
+    <div class="nine columns">
+      <label for="url">Input URL</label>
+      <input type="text" id="url" name="url" class="u-full-width" placeholder="[https://www.youtube.com]/path?key=value" autofocus>
+      <label>
+      <input type="checkbox" id="icon">
+      <span class="label-body">Text only</span>
+    </label>
+    </div>
+    <div class="three columns">
+      <label for="submit">&nbsp;</label>
+      <button class="button-primary" id="submit">Creep</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="result">Output Pane</label>
+    <div id="tabbed">
+      <!--loaded by ajax-->
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="result">
+      <!--loaded by ajax-->
+    </div>
+  </div>
+
+</div>
+<script src="static/js/display.js"></script>
+</body>
